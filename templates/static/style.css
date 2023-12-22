@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(93, 95, 114);
+}
+.head{
+    margin-top: auto;
+    text-align: center;
+    font-style: bold, italic;
+    font-size: 40px;
+    font-family: monospace;
+    letter-spacing: 1px;
+
+    
+}
+
+
+table,th,tr,td{
+    border:2px solid black;
+    border-collapse:collapse;
+    text-align: center;
+
+}
+td{
+    font-weight: bold;
+}
+th{
+    font-size: 25px;
+}
+table{
+    height: 100%;
+    width: 100%;
+    margin:50px;
+}
+
+img{
+    height: 90px;
+}

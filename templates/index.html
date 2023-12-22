@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="static/style.css">
+
+<head>
+    <title>Area Calculator</title>
+</head>
+
+<body>
+   <div class="head">
+    <p class="text">Welcome to area calculator</p>
+   </div>
+
+    <table>
+        <tr>
+            <th>S.N</th>
+            <th>Name</th>
+            <th>No of sides</th>
+            <th>Formula to calculate area</th>
+            <th>Notations</th>
+            <th>Shape</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Triangle</td>
+            <td>3</td>
+            <td><sup>1</sup>/<sub>2</sub>(b*h)</td>
+            <td>where b=base and h=height</td>
+            <td><img src="img/triangle.png" alt="triangle"></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Rectangle</td>
+            <td>4</td>
+            <td>l*b</td>
+            <td>where l=length and b=breadth</td>
+            <td><img src="img/rectangle.png" alt="rectangle"></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Pentagon</td>
+            <td>5</td>
+            <td><sup>1</sup>/<sub>4</sub> √5(5+2√5) a<sup>2</sup></td>
+            <td>where a=length of side</td>
+            <td><img src="img/pentagon.png" alt="pentagon"></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Hexagon</td>
+            <td>6</td>
+            <td>{(3√3)/<sub>3</sub> }a <sup>2</sup></td>
+            <td>where a=length of side</td>
+            <td><img src="img/hexagon.png" alt="hexagon"></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Heptagon</td>
+            <td>7</td>
+            <td>(<sup>7</sup>/<su>4</sub> )a<sup>2</sup>cot(<sup>180°</sup>/<sub>7</sub> )</td>
+            <td>where a=length of side</td>
+            <td><img src="img/heptagon.png" alt="heptagon"></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Octagon</td>
+            <td>8</td>
+            <td>2(1+√2)a <sup>2</sup></td>
+            <td>where a=length of side</td>
+            <td><img src="img/octagon.png" alt="octagon"></td>
+        </tr>
+
+    </table>
+    <br>
+    <br>
+    <h3><i>Derivation of formula to calculate the area of rectangle</i></h3>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/csNM8CwyunI?si=Y-Z9cFWiFY471YGt"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <br>
+    <br>
+    <form action="'/" method="post">
+        <label for="data">Enter Length: </label>
+        <input type="text" name="data" id="length" required>
+        <br>
+        <label for="data">Enter Breadth: </label>
+        <input type="text" name="data" id="breadth" required>
+        <br>    
+        <button type="submit">Calculate</button>
+
+    </form>
+    
+    {% if area is not none %}
+    <h2>Area</h2>
+    <p>Area of rectangle is:{{area}}</p>
+    {% endif %}
+
+    {% if data==0 or negative %}
+    <p>length and breadth must be greater than 0</p>
+</body>
+
+</html>
