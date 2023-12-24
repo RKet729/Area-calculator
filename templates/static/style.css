@@ -1,36 +1,73 @@
-body{
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans|Roboto&display=swap");
+
+body {
     background-color: rgb(93, 95, 114);
+
+
 }
-.head{
-    margin-top: auto;
-    text-align: center;
-    font-style: bold, italic;
+
+h1 {
+    font-family: Arial, sans-serif;
     font-size: 40px;
-    font-family: monospace;
-    letter-spacing: 1px;
+    text-align: center;
+    overflow: hidden;
+    /* Ensures the text doesn't overflow during animation */
+    white-space: nowrap;
+    /*Prevents the text from wrapping */
+    border-right: 1px solid #333;
+    /* Simulates the cursor blinking */
+    animation: typing 3s, blink-caret 0.5s step-end infinite;
 
-    
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: #333;
+    }
+
 }
 
 
-table,th,tr,td{
-    border:2px solid black;
-    border-collapse:collapse;
+table,
+th,
+tr,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
     text-align: center;
 
+
 }
-td{
+
+td {
     font-weight: bold;
 }
-th{
+
+th {
     font-size: 25px;
 }
-table{
-    height: 100%;
+
+table {
     width: 100%;
-    margin:50px;
 }
 
-img{
+img {
     height: 90px;
+
 }

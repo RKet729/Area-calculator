@@ -1,18 +1,16 @@
-from flask import Flask , request, render_templates
-
+from flask import Flask, request, render_template
 app=Flask(__name__)
+
 
 @app.route('/', methods=['GET', 'POST'])
 
 def calculator():
-    data=request.form.get('data')
-    if data:
-        data=[float(num)]
-        area=length*breadth
+    if request.method == 'POST':
+        length=float(request.form.get('length'))
+        breadth=float(request.form.get('breadth'))
+        area= length * breadth
     else:
-        area=None
-    
-    return render_templates("index.html")
-
+        length=breadth=area=None
+    return render_template("index.html", length=length, breadth=breadth, area=area)
 if __name__=='__main__':
     app.run(debug=True)

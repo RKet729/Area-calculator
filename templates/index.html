@@ -9,9 +9,9 @@
 </head>
 
 <body>
-   <div class="head">
-    <p class="text">Welcome to area calculator</p>
-   </div>
+    <div class="head">
+        <h1 class="text">Welcome to area calculator</h1>
+    </div>
 
     <table>
         <tr>
@@ -37,7 +37,7 @@
             <td>4</td>
             <td>l*b</td>
             <td>where l=length and b=breadth</td>
-            <td><img src="img/rectangle.png" alt="rectangle"></td>
+            <td><img class="zoom" src="img/rectangle.png" alt="rectangle"></td>
         </tr>
         <tr>
             <td>3</td>
@@ -84,24 +84,23 @@
 
     <br>
     <br>
+    <h3>Calculate the area</h3>
     <form action="'/" method="post">
-        <label for="data">Enter Length: </label>
-        <input type="text" name="data" id="length" required>
+        <label for="length">Enter Length: </label>
+        <input type="number" step="any" name="length" id="length" required>
         <br>
-        <label for="data">Enter Breadth: </label>
-        <input type="text" name="data" id="breadth" required>
-        <br>    
+        <label for="breadth">Enter Breadth: </label>
+        <input type="number" step="any" name="breadth" id="breadth" required>
+        <br>
         <button type="submit">Calculate</button>
 
     </form>
-    
-    {% if area is not none %}
-    <h2>Area</h2>
-    <p>Area of rectangle is:{{area}}</p>
+    {% if length and width and area %}
+    <p>Length: {{ length }}</p>
+    <p>breadth: {{ breadth }}</p>
+    <p>Area: {{ area }}</p>
     {% endif %}
 
-    {% if data==0 or negative %}
-    <p>length and breadth must be greater than 0</p>
 </body>
 
 </html>
