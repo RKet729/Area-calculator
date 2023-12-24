@@ -92,13 +92,22 @@
         <label for="breadth">Enter Breadth: </label>
         <input type="number" step="any" name="breadth" id="breadth" required>
         <br>
+
+        <label for class="unit">Select unit</label>
+        <select name="unit" class="unit">
+            <option value="cm">cm</option>
+            <option value="inch">inch</option>
+            <option value="feet">ft</option>
+        </select>
+        <br>
+        <br>
         <button type="submit">Calculate</button>
 
     </form>
-    {% if length and width and area %}
+    {% if area is not none %}
     <p>Length: {{ length }}</p>
     <p>breadth: {{ breadth }}</p>
-    <p>Area: {{ area }}</p>
+    <p>Area: {{ area }} {{ unit }}<sup>2</sup></p>
     {% endif %}
 
 </body>
