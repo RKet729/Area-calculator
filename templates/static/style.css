@@ -65,5 +65,19 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 .pop:hover {
-    transform: scale(1.2);
+    transform:rotate(10deg) scale(1.4);
+}
+td{
+    height: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+td:hover{
+    color: rgb(161, 233, 148);
+    transform: scale(1.4);
+}
+button:hover{
+    background-color: green;
+}
+iframe, h2{
+    margin-left: 50px;
 }

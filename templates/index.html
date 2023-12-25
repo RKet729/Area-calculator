@@ -75,7 +75,7 @@
     </table>
     <br>
     <br>
-    <h3><i>Derivation of formula to calculate the area of rectangle</i></h3>
+    <h2><i>Derivation of formula to calculate the area of rectangle</i></h2>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/csNM8CwyunI?si=Y-Z9cFWiFY471YGt"
         title="YouTube video player" frameborder="0"
@@ -93,21 +93,20 @@
         <input type="number" step="any" name="breadth" id="breadth" required>
         <br>
 
-        <label for class="unit">Select unit</label>
-        <select name="unit" class="unit">
+        <!-- <label for class="unit">Select unit</label>
+        <select name="unit" id="unit">
             <option value="cm">cm</option>
             <option value="inch">inch</option>
             <option value="feet">ft</option>
-        </select>
-        <br>
+        </select> -->
         <br>
         <button type="submit">Calculate</button>
 
     </form>
     {% if area is not none %}
-    <p>Length: {{ length }}</p>
-    <p>breadth: {{ breadth }}</p>
-    <p>Area: {{ area }} {{ unit }}<sup>2</sup></p>
+    <p>Length: {{ length }} {{ unit }}</p>
+    <p>breadth: {{ breadth }} {{ unit }}</p>
+    <p>Area: {{ area }} square unit</p>
     {% endif %}
 
 </body>
