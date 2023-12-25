@@ -2,6 +2,7 @@
 <html lang="en">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <link rel="stylesheet" href="static/style.css"> -->
 <link rel="stylesheet" href="static/style.css">
 
 <head>
@@ -75,39 +76,50 @@
     </table>
     <br>
     <br>
-    <h2><i>Derivation of formula to calculate the area of rectangle</i></h2>
+    <h2>Derivation of formula to calculate the area of rectangle    </h2>
+
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/csNM8CwyunI?si=Y-Z9cFWiFY471YGt"
         title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
 
+
+
     <br>
     <br>
-    <h3>Calculate the area</h3>
-    <form action="/" method="post">
-        <label for="length">Enter Length: </label>
-        <input type="number" step="any" name="length" id="length" required>
-        <br>
-        <label for="breadth">Enter Breadth: </label>
-        <input type="number" step="any" name="breadth" id="breadth" required>
-        <br>
+    <div class="calculator">
+        <h3>Calculate the area</h3>
+        <form action="/" method="post">
+            <label for="length">Enter Length: </label>
+            <input type="number" step="any" name="length" id="length" required>
+            <br>
+    
+            <label for="breadth">Enter Breadth: </label>
+            <input type="number" step="any" name="breadth" id="breadth" required>
+            <br>
+    
+            <!-- <label for class="selected_unit">Select unit</label>
+            <select name="selected_unit">
+                <option value="cm">cm</option>
+                <option value="inch">inch</option>
+                <option value="feet">ft</option>
+            </select> -->
+            <br>
+            <button type="submit">Calculate</button>
+    
+        </form>
+        {% if area is not none %}
+        {% if length|float >= 0 and breadth|float >= 0 %}
+        <p>Length: {{ length }}</p>
+        <p>Breadth: {{ breadth }}</p>
+        <p>Area: {{ area }} square unit</p>
+        {% else %}
+        <p class="show_error">Length and breadth must be positive numbers.</p>
+        {% endif %}
+        {% endif %}
+    </div>
 
-        <!-- <label for class="unit">Select unit</label>
-        <select name="unit" id="unit">
-            <option value="cm">cm</option>
-            <option value="inch">inch</option>
-            <option value="feet">ft</option>
-        </select> -->
-        <br>
-        <button type="submit">Calculate</button>
-
-    </form>
-    {% if area is not none %}
-    <p>Length: {{ length }} {{ unit }}</p>
-    <p>breadth: {{ breadth }} {{ unit }}</p>
-    <p>Area: {{ area }} square unit</p>
-    {% endif %}
 
 </body>
 
