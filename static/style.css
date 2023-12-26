@@ -78,7 +78,9 @@ img {
     transform: rotate(0deg) scale(1.4);
 }
 
-
+button{
+    text-align: right;
+}
 button:hover {
     background-color: green;
 }
@@ -93,9 +95,70 @@ h2{
 }
 h3{
     font-size: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .calculator{
-    text-align: center;
+    margin-left: 32%;
     font-size: 30px;
+    height: 400px;
+    width: 560px;
+}
+.result{
+    font-size: 25px;
+    background-color: grey;
+    border: solid black;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height:auto;
+}
+.user_input{
+    background-color: rgb(12, 134, 152);
+    height: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+}
+.measure{
+    margin-left: 5%;
+}
+
+#lb{
+    margin-left: 5%;
+
+}
+#submit-button{
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    margin-right: 35%;
+    margin-bottom: 2%;
+
+}
+.measure{
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.measure p:nth-child(1) {
+    animation-delay: 3s;
+}
+
+.measure p:nth-child(2) {
+    animation-delay: 4s;
+}
+
+.measure p:nth-child(3) {
+    animation-delay: 5s;
 }

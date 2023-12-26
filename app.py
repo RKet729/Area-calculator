@@ -8,11 +8,9 @@ def calculator():
     if request.method == 'POST':
         length=float(request.form.get('length'))
         breadth=float(request.form.get('breadth'))
-        
-        unit=str(request.form.get('unit'))
         area= length * breadth
     else:
         length=breadth=area=None
-    return render_template('index.html',length=length, breadth=breadth,area=area)
+    return render_template('index.html',area=area, length=length, breadth=breadth)
 if __name__=='__main__':
     app.run(debug=True)
