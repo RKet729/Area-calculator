@@ -8,6 +8,7 @@ def calculator():
     if request.method == 'POST':
         length=float(request.form.get('length'))
         breadth=float(request.form.get('breadth'))
+        
         unit=str(request.form.get('unit'))
         area= length * breadth
     else:
