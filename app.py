@@ -9,6 +9,7 @@ def calculator():
         length=float(request.form.get('length'))
         breadth=float(request.form.get('breadth'))
         area= length * breadth
+        
     else:
         length=breadth=area=None
     return render_template('index.html',area=area, length=length, breadth=breadth)

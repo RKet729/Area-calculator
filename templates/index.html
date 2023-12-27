@@ -8,13 +8,14 @@
     <title> Area Calculator</title>
     <link rel="stylesheet" href="static/style.css">
     <link rel="favicon" href="static/img/favicon">
+    <link rel="icon" href="/static/favicon.png" type="image/x-icon">
 </head>
 
 <body>
     <div class="head">
         <h1 class="text">Welcome to area calculator</h1>
     </div>
-
+<br>
     <table>
         <tr>
             <th>S.N</th>
@@ -95,25 +96,25 @@
             {% if area is not none %}
             {% if length|float >= 1 and breadth|float >= 1 %}
             <div class="measure">
-                <p>Length: {{ length }} {{ selected_unit }}</p>
-                <p>Breadth: {{ breadth }} {{ selected_unit }}</p>
-                <p>Area: {{ area }} square unit</p>
-                {% else %}
-                <p>Length and breadth must be a positive non zero numbers.</p>
-                {% endif %}
-                {% endif %}
+                <p>Length: {{ length }} cm</p>
+                <p>Breadth: {{ breadth }} cm</p>
+                <p>Area: {{ area }} cm<sup>2</sup></p>
             </div>
+            {% else %}
+            <p style="margin-left: 5%;">Length and breadth must be a positive non zero numbers.</p>
+            {% endif %}
+            {% endif %}
 
         </div>
         <div class="user_input">
             <div id="lb">
-                <form action="#" method="post">
-                    <label for="length">Enter Length: </label>
-                    <input type="number" step="any" name="length" id="length" required>
+                <form action="/" method="post">
+                    <label for="length">Enter Length : </label>
+                    <input type="number" step="any" name="length" id="length" required placeholder="cm">
                     <br>
 
                     <label for="breadth">Enter Breadth: </label>
-                    <input type="number" step="any" name="breadth" id="breadth" required>
+                    <input type="number" step="any" name="breadth" id="breadth" required placeholder="cm">
                     <!-- <select name="selected_unit">
                         <option value="cm">cm</option>
                         <option value="inch">inch</option>
@@ -126,9 +127,9 @@
         </div>
 
         </form>
-
-
     </div>
+
 </body>
+
 
 </html>
